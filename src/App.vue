@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header :header='title' />
+    <Table />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from '@/components/Header';
+import Table from '@/components/Table';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Table
+  },
+  data(){
+    return{
+        title:'Это мой первый заголовок'
+    }
   }
 }
 </script>
