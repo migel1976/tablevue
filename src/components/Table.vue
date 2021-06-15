@@ -56,7 +56,7 @@
     from 'devextreme-vue/data-grid';
     import CustomStore from 'devextreme/data/custom_store';
     import ruMessages from 'devextreme/localization/messages/ru.json';
-    import { locale, loadMessages, formatMessage } from 'devextreme/localization';
+    import { locale, loadMessages } from 'devextreme/localization';
 
     /* import 'whatwg-fetch'; */
     const URL='https://js.devexpress.com/Demos/Mvc/api/DataGridWebApi';
@@ -64,6 +64,7 @@
     export default{
         mounted(){
             locale('ru');       
+            this.initMessages(); 
         },
         components:{
             DxDataGrid,
@@ -103,6 +104,9 @@
             }
         },
         methods:{
+            initMessages() {
+                loadMessages(ruMessages);
+            },
             sendRequest(url, method, data){
             /* sendRequest(url, method){ */
                 method=method || 'GET';
