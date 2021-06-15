@@ -62,7 +62,8 @@
     const URL='https://js.devexpress.com/Demos/Mvc/api/DataGridWebApi';
 
     export default{
-        mounted(){
+        /* mounted(){ */
+        created(){
             locale('ru');       
             this.initMessages(); 
         },
