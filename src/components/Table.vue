@@ -1,10 +1,13 @@
 <template>
-    <div>
+    <v-card
+     height='100%'
+    >
       <DxDataGrid
         id="grid"
         :show-borders="true"
         :data-source="ordersData"
         :repaint-changes-only="true"
+        height='700px'
       >
       <DxEditing
         :refresh-mode="refreshMode"
@@ -41,7 +44,7 @@
         />
       </DxColumn>
     </DxDataGrid>
-    </div>
+    </v-card>
 </template>
 
 <script>

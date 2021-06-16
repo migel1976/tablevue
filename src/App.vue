@@ -1,35 +1,45 @@
 <template>
-  <div id="app">
-    <Header :header='title' />
-    <Table />
-  </div>
+    <v-app>
+       <v-card
+        height='100px'
+       >
+        <v-toolbar app>
+         <v-toolbar-title>Aloha</v-toolbar-title>
+         <v-spacer></v-spacer>
+          Mike
+         <v-btn icon href='/'>
+            <v-icon>exit_to_app</v-icon>
+         </v-btn>
+        </v-toolbar>
+       </v-card>
+        <v-content>
+            <v-container>
+              <Header :header='header' />
+            </v-container>
+            <v-container>
+              <Table />
+            </v-container>
+        </v-content>    
+
+        <v-footer app>
+            Mike Smirnov Vue Site
+        </v-footer>    
+    </v-app>
 </template>
 
 <script>
 import Header from '@/components/Header';
 import Table from '@/components/Table';
-
 export default {
   name: 'App',
+
   components: {
     Header,
     Table
   },
-  data(){
-    return{
-        title:'Это мой первый заголовок'
-    }
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  data: () => ({
+      header:'мой заголовок'
+  }),
+};
+</script>
