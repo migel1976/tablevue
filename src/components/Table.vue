@@ -8,6 +8,8 @@
         :data-source="ordersData"
         :repaint-changes-only="true"
         height='700px'
+        :selection="{ mode: 'single' }"
+        :row-alternation-enabled="true"
       >
       <DxEditing
         :refresh-mode="refreshMode"

@@ -4,7 +4,7 @@
         height='100px'
        >
         <v-toolbar app>
-         <v-toolbar-title>Aloha</v-toolbar-title>
+         <v-toolbar-title>Шапка сайта</v-toolbar-title>
          <v-spacer></v-spacer>
           Mike
          <v-btn icon href='/'>
@@ -39,7 +39,7 @@ export default {
   },
 
   data: () => ({
-      header:'мой заголовок'
+      header:'Таблица'
   }),
 };
 </script>
